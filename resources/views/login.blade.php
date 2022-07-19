@@ -43,5 +43,30 @@
         </div>
     </div>
 </div>
+<script src="{{ asset('/jQuery/jquery-3.4.1.min.js') }}"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-messaging.js"></script>
+<script src="{{ asset('/js/FBService.js') }}"></script>
+
+<script>
+
+    async function getTokenFcmWeb() {
+        let res_token = null;
+
+        const messaging = firebase.messaging();
+        try {
+            res_token = await messaging.getToken();
+        } catch (e) {
+            console.log(e)
+        }
+        console.log('tokett',res_token)
+        return res_token;
+    }
+    $(document).ready(function () {
+        console.log(getTokenFcmWeb());
+    })
+</script>
 </body>
 </html>

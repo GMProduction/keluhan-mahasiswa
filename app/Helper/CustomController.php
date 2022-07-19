@@ -195,6 +195,7 @@ class CustomController extends Controller
                 'role' => $role,
             ])->tokenById($id);
     }
+
     public function getCity()
     {
         $curl = curl_init();
@@ -267,5 +268,36 @@ class CustomController extends Controller
 
         ]);
         $messaging->send($message);
+    }
+
+    public function push_notif($title, $body)
+    {
+        $SERVER_API_KEY = 'AAAABjhw5Jk:APA91bG_d1uDJqYKpKo3VdlpQLUhF7iiN5A6eqb3efSq8mWeX6LatHXBuPhPor4cCBNbvfMvCBVvPMDH09Ahm_KlQenuPA2kPPyZlmwAr9-GBCBLQ9B7_pcNp4eNf6wUpIoS8eH-n0o1';
+
+        $data = [
+            "registration_ids" => ['faTrQsjUDqa1vqpAyGlrL1:APA91bEbFd032mw1sX7MqapDv57pah4dhbRwFcE_aGaCflsB__NgGChNtXauhgkjGicYxYbQ7uSGlCC0cEuKF9hNBxr3kchh2hCyGK9lPSVLls_Nvxfi3IffBBmNysuX6Vvf2Xqm-j54'],
+            "notification" => [
+                "title" => $title,
+                "body" => $body,
+            ]
+        ];
+
+        $dataString = json_encode($data);
+
+        $headers = [
+            'Authorization: key=' . $SERVER_API_KEY,
+            'Content-Type: application/json',
+        ];
+
+        $ch = curl_init();
+
+        curl_setopt($ch, CURLOPT_URL, 'https://fcm.googleapis.com/fcm/send');
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $dataString);
+        $response = curl_exec($ch);
+        return $response;
     }
 }

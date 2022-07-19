@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::match(['post', 'get'], '/', [\App\Http\Controllers\Admin\AuthController::class, 'login']);
 Route::get('/logout', [\App\Http\Controllers\Admin\AuthController::class, 'logout']);
 Route::get('/dashboard', [\App\Http\Controllers\Admin\DashboardController::class, 'index']);
+Route::get('/dashboard/data', [\App\Http\Controllers\Admin\DashboardController::class, 'get_data_keluhan']);
 
 Route::group(['prefix' => 'admin'], function () {
     Route::get('/', [\App\Http\Controllers\Admin\AdminController::class, 'index']);

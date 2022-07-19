@@ -167,6 +167,12 @@
 <script src="{{ asset ('/adminlte/js/adminlte.js') }}"></script>
 <script src="{{ asset('/datatables/jquery.dataTables.js') }}"></script>
 <script src="{{ asset('/datatables/dataTables.bootstrap4.min.js') }}"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-messaging.js"></script>
+
 @yield('js')
+
 </body>
 </html>

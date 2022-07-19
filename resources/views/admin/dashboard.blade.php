@@ -17,99 +17,68 @@
                 </li>
             </ol>
         </div>
+
+        <div class="w-100 p-2">
+            <table id="table-data" class="display w-100 table table-bordered">
+                <thead>
+                <tr>
+                    <th width="5%" class="text-center">#</th>
+                    <th>Tanggal</th>
+                    <th>Nama Mahasiswa</th>
+                    <th>Kelas</th>
+                    <th>Deskripsi</th>
+                    <th>Gambar</th>
+                    <th width="12%" class="text-center">Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
     </div>
 
 @endsection
 
 @section('js')
+    <script src="{{ asset('/js/helper.js') }}"></script>
+    <script src="{{ asset('/js/FBService.js') }}"></script>
     <script type="text/javascript">
-        let table;
-        var role = '{{ auth()->user()->role }}';
+        var table;
 
-        function reload() {
-            table.ajax.reload()
-        }
-
-        function confirm(id, status) {
-            if (role === 'kitchen' && status === '1') {
-                handleConfirm(id, status);
-            } else if ((role === 'admin' || role === 'kasir') && status === '0') {
-                handleConfirm(id, status);
-            }
-        }
-
-        async function handleConfirm(id, status) {
-            try {
-                let nextStatus = parseInt(status) + 1;
-                let response = await $.post('/transaction', {
-                    id: id,
-                    status: nextStatus,
-                    _token: '{{ csrf_token() }}'
-                });
-                if (response['status'] === 200) {
-                    reload();
-                } else {
-                    alert('Terjadi Kesalahan Server...');
-                }
-            } catch (e) {
-                alert('Terjadi Kesalahan Server...');
-            }
+        function reload_data() {
+            table.ajax.reload();
         }
 
         $(document).ready(function () {
-            table = $('#table-data').DataTable({
-                "scrollX": true,
-                processing: true,
-                ajax: {
-                    type: 'GET',
-                    url: '/transaction/data',
-                    'data': function (d) {
-                        if (role === 'kitchen') {
-                            return $.extend(
-                                {},
-                                d,
-                                {
-                                    status: 1
-                                }
-                            );
+            table = DataTableGenerator('#table-data', '/dashboard/data', [
+                {data: 'DT_RowIndex', name: 'DT_RowIndex', searchable: false, orderable: false},
+                {data: 'tanggal'},
+                {data: 'user.mahasiswa.nama'},
+                {data: 'user.mahasiswa.kelas.nama'},
+                {data: 'deskripsi'},
+                {
+                    data: null, render: function (data) {
+                        if (data['gambar'] === null) {
+                            return '<span>Tidak Ada Gambar</span>';
+                        }else {
+                            return '<a target="_blank" href="' + data['gambar'] + '">' +
+                                '<img src="' + data['gambar'] + '" alt="Gambar Keluhan" style="width: 75px; height: 80px; object-fit: cover"/>' +
+                                '</a>';
                         }
+
                     }
                 },
-                columns: [
-                    {data: 'DT_RowIndex', name: 'DT_RowIndex', searchable: false, orderable: false},
-                    {data: 'tanggal'},
-                    {data: 'customer'},
-                    {data: 'total'},
-                    {
-                        data: null, render: function (data, type, row, meta) {
-                            let status = data['status'];
-                            let statusText = 'Menunggu';
-                            let classButton = 'btn-danger';
-                            switch (status) {
-                                case 1:
-                                    statusText = 'Proses';
-                                    classButton = 'btn-warning';
-                                    break;
-                                case 2:
-                                    statusText = 'Selesai';
-                                    classButton = 'btn-success';
-                                    break;
-                                default:
-                                    break;
-                            }
-                            return '<a href="#" data-id="' + data['id'] + '" data-status="' + status + '" class="btn ' + classButton + ' btn-sm text-center btn-confirm">' + statusText + '</a>';
-                        }
-                    },
-                ],
-                paging: true,
-            });
-
-
-            $(document).on('click', '.btn-confirm', function (e) {
-                e.preventDefault();
-                let id = this.dataset.id;
-                let status = this.dataset.status;
-                confirm(id, status);
+                {
+                    data: null, render: function (data) {
+                        return '<a href="/keluhan-baru/' + data['id'] + '" class="btn btn-sm btn-info btn-edit"\n' +
+                            '                               data-id="' + data['id'] + '"><i class="fa fa-info"></i></a>';
+                    }
+                },
+            ], [], function (d) {
+            }, {
+                dom: 'ltipr',
+                "fnDrawCallback": function (oSettings) {
+                }
             });
         });
     </script>

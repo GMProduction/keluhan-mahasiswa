@@ -33,7 +33,8 @@ class KeluhanController extends CustomController
                     $this->uploadImage('gambar', $nama_file, 'gambar');
                 }
                 Keluhan::create($data);
-                return $this->jsonResponse('success', 200);
+                $res = $this->push_notif('hai,', 'Coba Push Notif');
+                return $this->jsonResponse('success', 200, $res);
             }
             $param = $this->field('param');
             $query = Keluhan::with('user.mahasiswa');
