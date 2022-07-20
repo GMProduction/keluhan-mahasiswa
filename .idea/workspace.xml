@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b3fc8c8-9772-4701-a430-e37f9dcaf2d4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/firebase-messaging-sw.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/gambar/9eaae45e-0741-11ed-9a71-2cf05d717790.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/FBService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Helper/CustomController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helper/CustomController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/DashboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/KeluhanController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/KeluhanController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,7 +207,9 @@
       <updated>1656407658411</updated>
       <workItem from="1656407659834" duration="835000" />
       <workItem from="1656567904277" duration="16000" />
-      <workItem from="1658212306808" duration="10170000" />
+      <workItem from="1658212306808" duration="10331000" />
+      <workItem from="1658222978180" duration="7000" />
+      <workItem from="1658301657572" duration="138000" />
     </task>
     <servers />
   </component>
@@ -237,9 +229,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="429" y="179" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1658217568822" />
-    <state x="379" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1656567912087">
+    <state x="379" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1658301697487">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1656567912087" />
+    <state x="379" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1658301697487" />
   </component>
 </project>
