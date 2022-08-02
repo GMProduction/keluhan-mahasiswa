@@ -46,6 +46,7 @@ class KeluhanController extends CustomController
             } else {
                 $query->where(function ($q) {
                     $q->where('status', 'menunggu')
+                        ->orWhere('status', 'terima')
                         ->orWhere('status', 'proses');
                 });
             }

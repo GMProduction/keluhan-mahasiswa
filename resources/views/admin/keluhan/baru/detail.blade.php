@@ -60,7 +60,7 @@
                                 <div class="form-group w-100 mt-2">
                                     <label for="status">Proses Keluhan</label>
                                     <select class="form-control" id="status" name="status" required>
-                                        <option value="terima">Terima</option>
+                                        <option value="proses">Proses</option>
                                         <option value="tolak">Tolak</option>
                                     </select>
                                 </div>

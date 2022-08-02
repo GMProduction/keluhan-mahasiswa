@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+    <list default="true" id="5b3fc8c8-9772-4701-a430-e37f9dcaf2d4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/gambar/c7f8dac4-123a-11ed-8490-2cf05d717790.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/KeluhanController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/KeluhanController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/keluhan/baru/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/keluhan/baru/detail.blade.php" afterDir="false" />
     <list default="true" id="85f68e89-b346-42d3-82ab-aa097305be3b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -189,6 +194,18 @@
       <created>1659415292896</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
+      <updated>1656407658411</updated>
+      <workItem from="1656407659834" duration="835000" />
+      <workItem from="1656567904277" duration="16000" />
+      <workItem from="1658212306808" duration="10331000" />
+      <workItem from="1658222978180" duration="7000" />
+      <workItem from="1658301657572" duration="1983000" />
+      <workItem from="1658308896783" duration="2218000" />
+      <workItem from="1658383685586" duration="7000" />
+      <workItem from="1658906311513" duration="73000" />
+      <workItem from="1659170134863" duration="55000" />
+      <workItem from="1659331778994" duration="303000" />
+      <workItem from="1659428165054" duration="119000" />
       <updated>1659415292896</updated>
       <workItem from="1659415295063" duration="1850000" />
       <workItem from="1659419069107" duration="35000" />
@@ -198,5 +215,23 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="437" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1658213934070">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="437" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1658213934070" />
+    <state x="413" y="120" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1658221975173">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="120" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1658221975173" />
+    <state x="429" y="179" key="NewPhpClassDialog" timestamp="1658217568822">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="429" y="179" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1658217568822" />
+    <state x="379" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1659331781039">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="379" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1659331781039" />
   </component>
 </project>
