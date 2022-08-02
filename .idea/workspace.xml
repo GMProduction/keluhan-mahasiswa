@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b3fc8c8-9772-4701-a430-e37f9dcaf2d4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/gambar/c7f8dac4-123a-11ed-8490-2cf05d717790.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/KeluhanController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/KeluhanController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/keluhan/baru/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/keluhan/baru/detail.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,7 +211,13 @@
       <workItem from="1656567904277" duration="16000" />
       <workItem from="1658212306808" duration="10331000" />
       <workItem from="1658222978180" duration="7000" />
-      <workItem from="1658301657572" duration="138000" />
+      <workItem from="1658301657572" duration="1983000" />
+      <workItem from="1658308896783" duration="2218000" />
+      <workItem from="1658383685586" duration="7000" />
+      <workItem from="1658906311513" duration="73000" />
+      <workItem from="1659170134863" duration="55000" />
+      <workItem from="1659331778994" duration="303000" />
+      <workItem from="1659428165054" duration="119000" />
     </task>
     <servers />
   </component>
@@ -229,9 +237,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="429" y="179" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1658217568822" />
-    <state x="379" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1658301697487">
+    <state x="379" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1659331781039">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1658301697487" />
+    <state x="379" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1659331781039" />
   </component>
 </project>
